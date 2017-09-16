@@ -44,3 +44,46 @@ The content structure that is posted looks as follows:
   "quality"   : 3  
 }
 ```
+OData published Time Series service 
+http://localhost:8080/ts.svc
+
+```
+<service xmlns="http://www.w3.org/2007/app" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:metadata="http://docs.oasis-open.org/odata/ns/metadata" xmlns:base="http://localhost:8080/ts.svc" xmlns:context="http://localhost:8080/ts.svc/$metadata">
+<workspace>
+<atom:title>SDLExample</atom:title>
+<collection href="Datapoints">
+<atom:title>Datapoints</atom:title>
+</collection>
+</workspace>
+```
+Service Metadata
+
+http://localhost:8080/ts.svc/$metadata
+```
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+<edmx:DataServices>
+<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="SDL.OData.TS">
+<EntityType Name="Datapoint">
+<Key>
+<PropertyRef Name="id"/>
+</Key>
+<Property Name="id" Type="Edm.String" Nullable="false"/>
+<Property Name="tagName" Type="Edm.String" Nullable="false"/>
+<Property Name="attribute" Type="Edm.String" Nullable="false"/>
+<Property Name="timeStamp" Type="Edm.Int64" Nullable="false"/>
+<Property Name="datapoint" Type="Edm.Int32" Nullable="false"/>
+<Property Name="quality" Type="Edm.Int32" Nullable="true"/>
+</EntityType>
+<EntityContainer Name="SDLExample">
+<EntitySet Name="Datapoints" EntityType="SDL.OData.TS.Datapoint"/>
+</EntityContainer>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>
+</service>
+```
+Time Series Data Points
+
+http://localhost:8080/ts.svc/Datapoints
+
+Returns all commited datapoints to the published service
