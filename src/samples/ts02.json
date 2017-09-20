@@ -1,0 +1,8 @@
+{ 
+  "id" : "12",
+  "tagName" : "TestPost",
+  "attribute" : "AttrPost",
+  "timeStamp" : 1488490548525,
+  "datapoint" : 10,
+  "quality"   : 3  
+}

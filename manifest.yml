@@ -2,5 +2,6 @@
 applications:
   - name: odata-ts-sample
     buildpack: java_buildpack
+    memory: 1024M
     path: example-service/target/example-service-1.0-SNAPSHOT.jar
 

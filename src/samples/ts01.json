@@ -1,9 +1,16 @@
-{ "@odata.context" : "http://localhost:8080/example.svc/$metadata#/Datapoints/$entity",
-  "@odata.id" : "/Datapoints('5')",
-  "id" : "11",
+{ 
+  "id" : "123",
   "tagName" : "TestPost",
   "attribute" : "AttrPost",
   "timeStamp" : 1488490548525,
   "datapoint" : 10,
-  "quality"   : 3  
+  "quality"   : 3,
+  "attrName01": "Name01",
+  "attrValue01":"value01",
+    "attrName02": "Name02",
+  "attrValue02":"value02",
+    "attrName03": "Name03",
+  "attrValue03":"value03",
+    "attrName04": "Name04",
+  "attrValue04":"value04"
 }

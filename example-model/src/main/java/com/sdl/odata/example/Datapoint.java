@@ -31,41 +31,63 @@ public class Datapoint {
 
     @EdmProperty(name = "tagName", nullable = false)
     private String tagName;
-    
-    @EdmProperty(name = "attribute", nullable = false)
-    private String attribute;
 
 	@EdmProperty(name = "timeStamp", nullable = false)
     private long timeStamp;
 
     @EdmProperty(name = "datapoint", nullable = false)
-    private int datapoint;
+    private double datapoint;
     
     @EdmProperty(name = "quality", nullable = true)
     private int quality;
+    
+    @EdmProperty(name = "attrName01", nullable = true)
+	private String attrName01;
 
-    public Datapoint(String id, String tagName, String attribute, long timeStamp, int datapoint, int quality) {
-        this.id = id;
-        this.tagName = tagName;
-        this.attribute = attribute;
-        this.timeStamp = timeStamp;
-        this.datapoint = datapoint;
-        this.quality = quality;
-    }
+    @EdmProperty(name = "attrValue01", nullable = true)
+	private String attrValue01;
 
+    @EdmProperty(name = "attrName02", nullable = true)
+	private String attrName02;
+
+    @EdmProperty(name = "attrValue02", nullable = true)
+	private String attrValue02;
+
+    @EdmProperty(name = "attrName03", nullable = true)
+	private String attrName03;
+
+    @EdmProperty(name = "attrValue03", nullable = true)
+	private String attrValue03;
+
+    @EdmProperty(name = "attrName04", nullable = true)
+	private String attrName04;
+
+    @EdmProperty(name = "attrValue04", nullable = true)
+	private String attrValue04;
+
+	public Datapoint(String id, String tagName, long timeStamp, double datapoint, int quality, String attrName01,
+			String attrValue01, String attrName02, String attrValue02, String attrName03, String attrValue03,
+			String attrName04, String attrValue04) {
+		this.id = id;
+		this.tagName = tagName;
+		this.timeStamp = timeStamp;
+		this.datapoint = datapoint;
+		this.quality = quality;
+		this.attrName01 = attrName01;
+		this.attrValue01 = attrValue01;
+		this.attrName02 = attrName02;
+		this.attrValue02 = attrValue02;
+		this.attrName03 = attrName03;
+		this.attrValue03 = attrValue03;
+		this.attrName04 = attrName04;
+		this.attrValue04 = attrValue04;
+	}
+	
     public Datapoint() {
     }
 
     public String getId() {
         return id;
-    }
-
-    public String getAttribute() {
-    	return attribute;
-    }
-    
-    public void setAttribute(String attribute) {
-    	this.attribute = attribute;
     }
     
     public int getQuality() {
@@ -96,11 +118,75 @@ public class Datapoint {
         this.timeStamp = lastName;
     }
 
-    public int getDatapoint() {
+    public double getDatapoint() {
         return datapoint;
     }
 
-    public void setDatapoint(int age) {
+    public void setDatapoint(double age) {
         this.datapoint = age;
     }
+
+	public String getAttrName01() {
+		return attrName01;
+	}
+
+	public void setAttrName01(String attrName01) {
+		this.attrName01 = attrName01;
+	}
+
+	public String getAttrValue01() {
+		return attrValue01;
+	}
+
+	public void setAttrValue01(String attrValue01) {
+		this.attrValue01 = attrValue01;
+	}
+
+	public String getAttrName02() {
+		return attrName02;
+	}
+
+	public void setAttrName02(String attrName02) {
+		this.attrName02 = attrName02;
+	}
+
+	public String getAttrValue02() {
+		return attrValue02;
+	}
+
+	public void setAttrValue02(String attrValue02) {
+		this.attrValue02 = attrValue02;
+	}
+
+	public String getAttrName03() {
+		return attrName03;
+	}
+
+	public void setAttrName03(String attrName03) {
+		this.attrName03 = attrName03;
+	}
+
+	public String getAttrValue03() {
+		return attrValue03;
+	}
+
+	public void setAttrValue03(String attrValue03) {
+		this.attrValue03 = attrValue03;
+	}
+
+	public String getAttrName04() {
+		return attrName04;
+	}
+
+	public void setAttrName04(String attrName04) {
+		this.attrName04 = attrName04;
+	}
+
+	public String getAttrValue04() {
+		return attrValue04;
+	}
+
+	public void setAttrValue04(String attrValue04) {
+		this.attrValue04 = attrValue04;
+	}
 }

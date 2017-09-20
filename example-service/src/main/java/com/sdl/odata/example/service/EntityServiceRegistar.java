@@ -50,14 +50,14 @@ public class EntityServiceRegistar {
                 GetAverageAge.class
         ));
 
-        List<Datapoint> persons = Lists.newArrayList(
-                new Datapoint("1", "TagTest", "Attribute", 1488490548525L, 1, 0),
-                new Datapoint("2", "TagTest", "Attribute", 1488490549525L, 2, 1),
-                new Datapoint("3", "TagTest", "Attribute", 1488490550525L, 2, 2),
-                new Datapoint("4", "TagTest", "Attribute", 1488490559525L, 3, 3));
+        List<Datapoint> datapoints = Lists.newArrayList(
+                new Datapoint("11", "TagTest", 1488490548525L, 1.111, 0,"A1","V1","A2","V2","A3","V3","A4","V4"),
+                new Datapoint("21", "TagTest", 1488490548525L, 2.0, 1,"A1","","","","A3","V3","A4","V4"),
+                new Datapoint("31", "TagTest", 1488490548525L, 3.33, 0,"A1","V1","A2","V2","A3","V3","","")
+                );
 
-        for (Datapoint person : persons) {
-            inMemoryDataSource.create(null, person, null);
+        for (Datapoint datapoint : datapoints) {
+            inMemoryDataSource.create(null, datapoint, null);
         }
     }
 }

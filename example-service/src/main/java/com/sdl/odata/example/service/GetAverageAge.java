@@ -42,7 +42,7 @@ public class GetAverageAge implements Operation<Double> {
 
         InMemoryDataSource dataSource = (InMemoryDataSource) dataSourceFactory.getDataSource(oDataRequestContext, "SDL.OData.Example.Datapoint");
         ConcurrentMap<String, Datapoint> personConcurrentMap = dataSource.getPersonConcurrentMap();
-        Double result = personConcurrentMap.values().stream().mapToInt(Datapoint::getDatapoint).average().getAsDouble();
+        Double result = personConcurrentMap.values().stream().mapToDouble(Datapoint::getDatapoint).average().getAsDouble();
         LOG.debug("Average datapoint: {}", result);
 
         return result;
