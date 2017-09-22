@@ -1,8 +1,17 @@
-{ 
-  "id" : "12",
-  "tagName" : "TestPost",
-  "attribute" : "AttrPost",
-  "timeStamp" : 1488490548525,
-  "datapoint" : 10,
-  "quality"   : 3  
+{
+  "id" : "TRACK_40TEST",
+  "tagName" : "TRACK_40",
+  "timeStamp" : 1488490627528,
+  "datapoint" : 40.0,
+  "quality" : 3,
+  "attrName01" : "sensor",
+  "attrValue01" : "Tire1",
+  "attrName02" : "",
+  "attrValue02" : "",
+  "attrName03" : "",
+  "attrValue03" : "",
+  "attrName04" : "",
+  "attrValue04" : ""
 }
+
+

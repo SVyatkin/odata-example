@@ -1,0 +1,1 @@
+curl -i -X POST -d @src/samples/ts02.json http://odata-ts-sample.cfapps.io/ts.svc/Datapoints --header "Content-Type:application/json"
